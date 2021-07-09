@@ -1,0 +1,7 @@
+sudo apt-get remove nagios-agent
+sudo apt-get --purge autoremove nagios-agent
+sudo apt-get update
+sudo rm -r /usr/local/nagios
+cd /tmp
+sudo rm -r *
+

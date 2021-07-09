@@ -1,0 +1,39 @@
+# Define a host with a service
+sudo vim /usr/local/nagios/etc/objects/Linux.cfg
+############################################################################################
+define host {
+
+    use                     linux-server 
+    host_name               My-Linux-server
+    alias                   from aws
+    address                 100.25.46.120
+}
+
+define service {
+    host_name              My-Linux-server
+    service_description    HTTP
+    check_command          check_http
+    max_check_attempts     3
+    check_interval         1
+    retry_interval         1
+    check_period           24x7
+    notification_interval  60
+    notification_period    24x7
+    contacts               nagiosadmin
+}
+############################################################################################
+
+
+# Add the new host path
+sudo vim /usr/local/nagios/etc/nagios.cfg
+############################################################################################
+...
+cfg_file=/usr/local/nagios/etc/objects/Linux.cfg
+...
+############################################################################################
+
+
+# Verify and restart the service
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+sudo systemctl restart nagios.service
+

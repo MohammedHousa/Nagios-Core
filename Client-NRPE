@@ -1,0 +1,16 @@
+# Installing NRPE
+cd /tmp
+wget http://assets.nagios.com/downloads/nagiosxi/agents/linux-nrpe-agent.tar.gz
+tar xzf linux-nrpe-agent.tar.gz
+cd linux-nrpe-agent
+sudo ./fullinstall
+
+# Installing Apache2
+sudo su
+apt install apache2 -y
+systemctl enable apache2
+systemctl start apache2
+echo "Hello World" > /var/www/html/index.html
+curl localhost:80
+systemctl restart nrpe
+

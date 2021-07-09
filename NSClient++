@@ -1,0 +1,32 @@
+# Download the NSClient
+http://www.nsclient.org/download/
+
+# Find check_nt command and edit it to include the password
+sudo vim /usr/local/nagios/etc/objects/commands.cfg
+############################################################################################
+...
+define command {
+
+    command_name    check_nt
+    command_line    $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s xbACKnukKODpoGnU -v $ARG1$ $ARG2$
+}
+...
+############################################################################################
+
+
+# Add the IP of windows host
+sudo vim /usr/local/nagios/etc/objects/windows.cfg
+
+# Uncomment windows config path
+sudo vim /usr/local/nagios/etc/nagios.cfg
+############################################################################################
+...
+cfg_file=/usr/local/nagios/etc/objects/windows.cfg
+...
+############################################################################################
+
+
+# Verify and restart the service
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+sudo systemctl restart nagios.service
+
