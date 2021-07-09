@@ -6,7 +6,7 @@ define host {
     use                     linux-server 
     host_name               My-Linux-server
     alias                   from aws
-    address                 100.25.46.120
+    address                 100.25.XXXX
 }
 
 define service {
