@@ -8,7 +8,7 @@ sudo vim /usr/local/nagios/etc/objects/commands.cfg
 define command {
 
     command_name    check_nt
-    command_line    $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s xbACKnukKODpoGnU -v $ARG1$ $ARG2$
+    command_line    $USER1$/check_nt -H $HOSTADDRESS$ -p 12489 -s PASSWORD -v $ARG1$ $ARG2$
 }
 ...
 ############################################################################################
