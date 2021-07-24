@@ -1,8 +1,11 @@
 # Nagios-Core
 Nagios Core, formerly known as Nagios, is a free and open-source computer-software application that monitors systems, networks and infrastructure. Nagios offers monitoring and alerting services for servers, switches, applications and services.
 
-GitHub Repo: https://github.com/MohammedHousa/Packer
+GitHub Repo: https://github.com/MohammedHousa/Nagios-Core
+Nagios Core: https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source-96.html#Ubuntu
 
 Tutorials: 
-1. How to create a custom image in AWS using Packer https://youtu.be/awSotQlwpfI
-2. How to launch an instance from a custom image in AWS using terraform https://youtu.be/PWfJwb7w9O4
+1. How to Install Nagios Core on Ubuntu https://youtu.be/X-C-qICrdEM
+2. How to connect NRPE Client to Nagios Master https://youtu.be/LBr95cUSsW0
+3. How to connect NSClient++ to Nagios Master https://youtu.be/rEJKkreBF2M
+4. How to uninstall Nagios Core on Ubuntu https://youtu.be/vlIiRQpr8G8
